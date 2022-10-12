@@ -1,14 +1,13 @@
-import Item from "../Item/Item"
 import './ItemList.css'
-const ItemList = ({ products }) => {
-    //listar
+import Item from '../Item/Item'
 
-    //map transformando los productos en componentes Item
-    return (
-        <div className="lista">
-            { products.map(prod => <Item key={prod.id} img={prod.img} name={prod.name} price={prod.price}/>)}
-        </div>
+const ItemList = ({products, setPage }) => {
+    return(
+        <div className='ListGroup' onClick={() => console.log('hice click en itemlist')}>
+            {products.map(prod => <Item key={prod.id} {...prod} setPage={setPage}/>)}
+        </div>    
     )
 }
 
 export default ItemList
+
