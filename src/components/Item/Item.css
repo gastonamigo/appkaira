@@ -48,8 +48,8 @@
 }
 
 .ItemImg {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: auto;
     object-fit: cover;
     object-position: center;
 }
