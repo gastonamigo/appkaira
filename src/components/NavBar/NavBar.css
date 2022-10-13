@@ -4,8 +4,19 @@
     justify-content: space-around;
     align-items: center;
     height: 60px;
-    background: wheat;
+    background: rgba(221, 220, 220, 0.527);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   }
+  .Tittle{
+    text-decoration: none;
+    color: #0096c7;
+    display: flex;
+    font-size: 2rem;
+    align-items: center; }
+    .Tittle:hover {
+      color: #5a91df; }
+
+
   
   .Categories {
     display: flex;
@@ -14,15 +25,14 @@
   }
   
   .Option {
-    /* color: #8C30F5; */
     text-decoration: none;
     border-radius: 10;
     margin: 0 25px;
     /* TODO */
     width: auto;
     padding: 12px;
-    font-size: 8px;
-    background: #897df5d5;
+    font-size: 15px;
+    background: #0096c7;
     border-radius: 5px;
     flex: none;
     display: flex;
@@ -48,7 +58,7 @@
     width: auto;
     padding: 12px;
     font-size: 15px;
-    background: rgb(102, 102, 247);
+    background: #5a91df;
     border-radius: 5px;
     flex: none;
     display: flex;
@@ -63,9 +73,4 @@
     border-style: none;
     cursor: pointer;
     outline: inherit;
-  }
-  
-  .NavLink {
-    color :rgb(95, 97, 240);
-    text-decoration: none;
   }

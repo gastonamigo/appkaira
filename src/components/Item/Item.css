@@ -3,9 +3,10 @@
     padding: 30px;
     margin: 30px;
     font-size: 10px;
-    background-color: papayawhip;
+    background-color: rgba(122, 149, 236, 0.644);
     border: 1px solid #e1e1e1;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .Header {
@@ -21,16 +22,16 @@
 }
 
 .Info {
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     justify-content: space-around;
 }
 
 .ButtonDetail {
     width: auto;
-    padding: 12px;
-    font-size: 8px;
-    background: #8C30F5;
+    padding: 8px;
+    font-size: 12px;
+    background:  #0096c7;
     border-radius: 8px;
     flex: none;
     display: flex;
@@ -42,9 +43,8 @@
     text-decoration: none;
     color: #FFFFFF;
     border: none;
-    border-style: none;
     cursor: pointer;
-    outline: inherit;
+    
 }
 
 .ItemImg {
