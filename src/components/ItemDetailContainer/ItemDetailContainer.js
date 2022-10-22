@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         }).finally(() => {
             setLoading(false)
         })
-    }, [productId])
+    }, [])
 
     if(loading) {
         return <h1>Cargando...</h1>
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div className='ItemDetailContainer' >
-            <ItemDetail  {...product} />
+            <ItemDetail key= {product.id} {... product} />
         </div>
     )
 }

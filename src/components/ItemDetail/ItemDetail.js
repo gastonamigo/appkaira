@@ -1,14 +1,28 @@
 import './ItemDetail.css'
-
 import Counter from '../Counter/Counter'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
+// import { NotificationContext } from '../../notification/NotificationService'
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+   
+    const { addItem, isInCart, getProductQuantity } = useContext(CartContext)
+    // const { setNotification } = useContext(NotificationContext)
+
     const handleOnAdd = (quantity) => {
+
         const productToAdd = {
-            id, name, price, quantity
+            id,
+            name,
+            price
         }
-        console.log(productToAdd)
+
+        addItem(productToAdd, quantity)
+        // setNotification('error', `Se agrego correctamente ${quantity} ${name}`)
     }
+
+    const quantityAdded = getProductQuantity(id)
 
     return (
         <article className="CardItem">
@@ -32,12 +46,16 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 </p>
             </section>           
             <footer className='ItemFooter'>
-                <Counter onAdd={handleOnAdd} stock={stock} />
+                {
+                    !isInCart(id) 
+                        ? 
+                        <Counter onAdd={handleOnAdd} stock={stock} initial={quantityAdded} />
+                        : <Link to='/cart' className='Option'>Finalizar compra</Link>
+                }
+                
             </footer>
         </article>
     )
 }
 
 export default ItemDetail
-
-

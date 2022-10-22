@@ -31,8 +31,8 @@ const ItemListContainer = ({ }) => {
 
 
     return (
-        <div onClick={() => console.log('click en itemlistcontainer')}>
-            {/* <button onClick={(e) => console.log(e)}>boton</button> */}
+        <div>
+           
             <ItemList products={products} />
         </div>
     )

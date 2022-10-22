@@ -24,7 +24,15 @@ const Counter = ({stock = 0, initial = 1, onAdd})=> {
                 <button className="Button" onClick={increment}>+</button>
             </div>
             <div>
-                <button className="Button" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+                {quantity > 0?
+                <button className="Button" onClick={() => onAdd(quantity)}>
+                    Agregar al carrito
+                </button>
+                :
+                <button className="ButtonDisable" onClick={() => onAdd(quantity)}>
+                    Agregar al carrito
+                </button>
+            }
             </div>
        </div>
    )
